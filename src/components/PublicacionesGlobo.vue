@@ -25,8 +25,8 @@
             <div class="container" id="divComentarios"> 
             <p class="comment" v-for = "(arrayComentario, index) in arrayComentarios" :key="index">
                {{ arrayComentario.usuario}} : {{ arrayComentario.comentario }}
-            </p>
-            
+               <button>Eliminar</button>
+            </p>    
 
             
             </div>
@@ -37,7 +37,9 @@
                 <button type="submit" class="btn btn-primary" id="btnComentar">Comentar</button>
             </div>
             <!-- <p>{{ comentario }}</p> -->
-            <div class="container ml-4" id="divAlerta"></div>
+            <div class="container ml-4" id="divAlerta">
+                <p style="color:red">{{ errores }}</p>
+            </div>
             <br>
         </form>     
     </div>
@@ -45,12 +47,14 @@
 </template>
 
 <script>
+//import { string } from 'yargs'
+
 
 
 export default{
     name: 'PublicacionesGlobo',
     props:{
-        usuario:String
+        //usuario:String
     },
     data()
     {
@@ -59,14 +63,15 @@ export default{
           fondo:"",
           like:200,
           comentario:"",
-          arrayComentarios:[]
+          arrayComentarios:[],
+          errores:""
           
         }
     },
     methods:
     {
         DarLike(){
-            
+           
             if(this.botonMeGusta=="Me gusta"){
                 this.botonMeGusta="No me gusta"
                 this.fondo="blue"
@@ -80,11 +85,23 @@ export default{
             }
         },
         AgregarComentario(){
+            
+            if(!this.comentario.trim()=="")
+            {
+                
+                this.errores=""
+                this.arrayComentarios.push({
+                usuario:this.valorProps,
+                comentario: this.comentario                
+                })
+                this.comentario=""
+            }
+            else{
+                this.errores="Debe ingresar un comentario!!"                
+            }
+           
 
-            this.arrayComentarios.push({
-             usuario:this.valorProps,
-             comentario: this.comentario
-            })
+        
         }
 
     }
