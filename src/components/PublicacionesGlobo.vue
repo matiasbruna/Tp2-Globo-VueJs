@@ -21,18 +21,27 @@
             <p class="comment"><strong>Kathleen J Rennie </strong> ¡Esta foto de Tokyo es simplemente
                 espectacular! Me trae tantos recuerdos.</p>
         </div>
-        <div class="container" id="divComentarios">
-        </div>
+        <form @submit.prevent="AgregarComentario">
+            <div class="container" id="divComentarios"> 
+            <p class="comment" v-for = "(arrayComentario, index) in arrayComentarios" :key="index">
+            {{ arrayComentario.comentario }}
+            </p>
+            
 
-        <div class="container mt-5 mb-0 p-0">
-            <input class="form-control-sm comment mb-0" type="text" id="txtComentarios"
-                placeholder="Deja tu comentario...">
-            <button class="btn btn-primary" id="btnComentar">Comentar</button>
-        </div>
-        <div class="container ml-4" id="divAlerta"></div>
-        <br>
+            
+            </div>
+
+            <div class="container mt-5 mb-0 p-0">
+                <input v-model="comentario" class="form-control-sm comment mb-0" type="text" id="txtComentarios"
+                    placeholder="Deja tu comentario...">
+                <button type="submit" class="btn btn-primary" id="btnComentar">Comentar</button>
+            </div>
+            <!-- <p>{{ comentario }}</p> -->
+            <div class="container ml-4" id="divAlerta"></div>
+            <br>
+        </form>     
     </div>
-
+         
 </template>
 
 <script>
@@ -43,7 +52,9 @@ export default{
         return{
           botonMeGusta:"Me gusta",
           fondo:"",
-          like:200
+          like:200,
+          comentario:"",
+          arrayComentarios:[]
         }
     },
     methods:
@@ -61,6 +72,12 @@ export default{
                 this.fondo=""
                 this.like--
             }
+        },
+        AgregarComentario(){
+
+            this.arrayComentarios.push({
+               comentario: this.comentario
+            })
         }
 
     }
