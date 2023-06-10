@@ -85,13 +85,87 @@
 export default {
     name:"CuerpoGlobo"
 
-    
+
 }
 
 </script>
 
 <style scoped>
+.container-color{
+    background-color: white;
 
+}
+
+.imgPerfil{
+    width: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0.5 auto;
+    
+}
+@media (max-width: 576px) {
+    .imgPerfil {
+        width: 90%;
+        height: 90%;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.datos{
+    text-align: left;
+    padding-left: 0rem;
+}
+#btnSeguir{    
+
+position: absolute; 
+bottom: 40px; 
+
+}
+.imgPublicacion{
+width: 90%;
+margin:2rem;
+margin:1rem;
+}
+.gris{
+color: grey;
+}
+
+.col-sm{
+float: right;
+margin-top: 13rem;
+padding-left: 8rem;
+padding-top: 15px;
+
+
+}
+#txtLike{
+    float: right;
+}
+.btn-outline-primary{
+    color:white;
+    background-color: rgb(59,130, 246);
+}
+.abs-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+.btn-eliminarCometario
+{
+    color: red;
+    background-color:rgb(228, 222, 222);
+    border: beige;
+    border-radius: 7px;
+}
+.form-control-sm.comment
+{
+    width: 400px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+}
 
 </style>
 
