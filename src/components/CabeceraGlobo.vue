@@ -1,19 +1,14 @@
 <template>
     <div class="header">
         <div class="container">
-                <div class="row">
+            <div class="row">
+                <div class="col-6 col-sm-6">
+                    <img src="@/assets/img/logo.png" class="logo" alt="">
+                </div>       
                     <div class="col-6 col-sm-6">
-                        <img src="@/assets/img/logo.png" class="logo" alt="">
-                    </div>
-                    <div class="col-6 col-sm-6">
-                        {{ msg }}
-                    </div>
-
-                    <div class="col-6 col-sm-6">
-                        <input v-model="usuario"  type="text" class="form-control-sm" placeholder="Ingresa tu usuario..." id="txtUsuario">
-                    </div>                                     
-                </div>
-                <p>{{ usuario }}</p>
+                    <input v-model="usuario"  type="text" class="form-control-sm" placeholder="Ingresa tu usuario..." id="txtUsuario">
+                </div>                                     
+            </div>
         </div>
     </div>
 </template>
@@ -22,10 +17,8 @@
 export default {
   name: 'CabeceraGlobo',
   data() {
-
     return{
         usuario:"",
-
     }
   },
   watch: {
@@ -33,9 +26,6 @@ export default {
       this.$emit('usuarioEnviado', nuevoUsuario);
     }
   },
-
-
-  
 }
 
 </script>

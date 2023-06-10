@@ -1,27 +1,16 @@
 <template>
-  
-  <CabeceraGlobo  @usuarioEnviado="recibirUsuario"/>
-  
-
+  <CabeceraGlobo  @usuarioEnviado="recibirUsuario"/> 
   <PerfilGlobo/>
-
   <div class="container mt-4 p-0">
     <div class="row">
         <div class="col-7">
-
             <PublicacionesGlobo :usuario ="usuario"/>
-
         </div>
         <div class="col-5">
-
-          
-
-          <SobreMiGlobo/>  
-                 
+          <SobreMiGlobo/>          
         </div>
     </div>
   </div>
-  
 </template>
 
 <script>
@@ -35,7 +24,7 @@ export default {
   name: 'App',
   data(){
     return{
-      usuario: 'hola papa'
+      usuario: ''
     }
   },
   components: {
@@ -56,12 +45,7 @@ methods:{
 #app {
 
   background-color: rgb(244, 244, 245); 
+  font-family: 'Montserrat', sans-serif;
   
-  /* font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  */
 }
 </style>

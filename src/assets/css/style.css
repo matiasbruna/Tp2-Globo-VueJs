@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: Montserrat;
     src: url(./font/Montserrat.ttf);
 }
@@ -7,16 +7,7 @@ body{
     
 }
 
+ */
 
 
 
-h2{
-    margin-top: 2rem;
-}
-
-h5{
-    
-    position: relative;
-    bottom: -1rem;
-    margin-left: 1rem;
-}

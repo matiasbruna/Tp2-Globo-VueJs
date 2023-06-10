@@ -23,7 +23,7 @@
         </div>
         <div class="container" id="divComentarios"> 
             <p class="comment" v-for = "(arrayComentario, index) in arrayComentarios" :key="index">
-               {{ arrayComentario.usuario}} : {{ arrayComentario.comentario }}
+                <strong>{{ arrayComentario.usuario}} </strong>  {{ arrayComentario.comentario }}
              
                <button class="btn-eliminarCometario" @click="EliminarComentarios(index)">Eliminar</button>
             </p>              
@@ -31,26 +31,19 @@
         <form @submit.prevent="AgregarComentarios">           
 
             <div class="container mt-5 mb-0 p-0">
-                <input v-model="comentario" class="form-control-sm comment mb-0" type="text" id="txtComentarios"
-                    placeholder="Deja tu comentario...">
-                <button type="submit" class="btn btn-primary" id="btnComentar">Comentar</button>
+                <input v-model="comentario" class="form-control-sm comment mb-0" type="text" id="txtComentarios" placeholder="Deja tu comentario...">
+                <button type="submit" class="btn btn-primary pl-1 " id="btnComentar">Comentar</button>
             </div>
             
             <div class="container ml-4" id="divAlerta">
                 <p :style="{'color': ColorErrores }">{{ errores }}</p>
             </div>
             <br>
-        </form>   
-
-        
-    </div>
-        
+        </form>        
+    </div>        
 </template>
 
 <script>
-//import { string } from 'yargs'
-
-
 
 export default{
     name: 'PublicacionesGlobo',
@@ -67,8 +60,7 @@ export default{
           arrayComentarios:[],
           errores:"",
           ColorErrores:"red",
-          
-          
+   
         }
     },
     methods:
@@ -88,19 +80,24 @@ export default{
             }
         },
         AgregarComentarios(){
-            
-            if(!this.comentario.trim()=="")
+
+            if(!this.usuario.trim()=="")
             {
-                
-                this.errores=""
-                this.arrayComentarios.push({
-                usuario:this.valorProps,
-                comentario: this.comentario                
-                })
+                if(!this.comentario.trim()==""){
+                    this.errores=""
+                    this.arrayComentarios.push({
+                    usuario:this.usuario,
+                    comentario: this.comentario                
+                    })                   
+                }else 
+                {
+                    this.errores = 'Debe ingresar un comentario valido!!.'                    
+                }
+
                 this.comentario=""
             }
             else{
-                this.errores="Debe ingresar un comentario!!"                
+                this.errores="Debe ingresar un usuario valido!!"                
             }           
         },
         EliminarComentarios(Index){
@@ -113,7 +110,9 @@ export default{
 </script>
 
 <style scoped>
-
+#btnComentar{
+    margin-left: 10px;
+}
 .container-color{
     background-color: white;
 
