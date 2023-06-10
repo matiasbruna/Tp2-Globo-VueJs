@@ -1,5 +1,7 @@
-# vue-test
+# Tp2-Globo-VueJS.
 
+
+Trabajo Practico de la Materia Laboratorio de programacion 3 , de la carrera, Tecnico en Programacion Universitaria de la UTN San Francisco Cordoba.
 ## Project setup
 ```
 npm install
