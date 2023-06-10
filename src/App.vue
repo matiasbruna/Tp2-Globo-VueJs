@@ -6,10 +6,14 @@
   <div class="container mt-4 p-0">
     <div class="row">
         <div class="col-7">
+
             <PublicacionesGlobo/>
+
         </div>
         <div class="col-5">
-          <SobreMiGlobo/>         
+
+          <SobreMiGlobo/>  
+                 
         </div>
     </div>
   </div>

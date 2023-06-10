@@ -16,7 +16,7 @@
                 <p class="gris">Trabajando en <b>Lawn N</b></p>
             </div>
             <div class="col-xs-12 col-sm-2 " style="position: relative" id="cajaSeguir">
-                <button class="btn btn-outline-primary" id="btnSeguir">Seguir</button>
+                <button @click="seguirUsuario" :style="{ 'background-color': fondo }" class="btn btn-primary" id="btnSeguir">{{ botonSeguir }}</button>
             </div>
         </div>
     </div>
@@ -27,7 +27,28 @@
 <script>
 
 export default {
-    name: 'PerfilGlobo'
+    name: 'PerfilGlobo',
+
+    data(){
+        return{
+            botonSeguir: 'Seguir',
+            fondo: ''
+        }
+    },
+    methods:{
+        seguirUsuario(){
+            if(this.botonSeguir== 'Seguir'){
+                this.botonSeguir = 'Dejar de Seguir',
+                this.fondo =  "blue"
+            }
+            else
+            {
+                this.botonSeguir = 'Seguir',
+                this.fondo = ''
+            }
+           
+        }
+    }
 }
 
 
