@@ -10,12 +10,10 @@
                     </div>
 
                     <div class="col-6 col-sm-6">
-                        <input v-model="usuario" type="text" class="form-control-sm" placeholder="Ingresa tu usuario..." id="txtUsuario">
-                        <App :valorProps="usuario"/>
-                    </div>
-                    
-                    
+                        <input v-model="usuario"  type="text" class="form-control-sm" placeholder="Ingresa tu usuario..." id="txtUsuario">
+                    </div>                                     
                 </div>
+                <p>{{ usuario }}</p>
         </div>
     </div>
 </template>
@@ -29,7 +27,15 @@ export default {
         usuario:"",
 
     }
-  }
+  },
+  watch: {
+    usuario(nuevoUsuario) {
+      this.$emit('usuarioEnviado', nuevoUsuario);
+    }
+  },
+
+
+  
 }
 
 </script>

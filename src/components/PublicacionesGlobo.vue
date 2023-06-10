@@ -45,7 +45,7 @@
 
         
     </div>
-         
+        
 </template>
 
 <script>
@@ -56,7 +56,7 @@
 export default{
     name: 'PublicacionesGlobo',
     props:{
-        //usuario:String
+        usuario:String
     },
     data()
     {

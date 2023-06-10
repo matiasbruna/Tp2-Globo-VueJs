@@ -1,5 +1,7 @@
 <template>
-  <CabeceraGlobo/>
+  
+  <CabeceraGlobo  @usuarioEnviado="recibirUsuario"/>
+  
 
   <PerfilGlobo/>
 
@@ -7,10 +9,12 @@
     <div class="row">
         <div class="col-7">
 
-            <PublicacionesGlobo :usuario="valorProps"/>
+            <PublicacionesGlobo :usuario ="usuario"/>
 
         </div>
         <div class="col-5">
+
+          
 
           <SobreMiGlobo/>  
                  
@@ -29,12 +33,21 @@ import SobreMiGlobo from './components/SobreMiGlobo.vue';
 
 export default {
   name: 'App',
-  props:['valorProps'],
+  data(){
+    return{
+      usuario: 'hola papa'
+    }
+  },
   components: {
     CabeceraGlobo,
     PerfilGlobo,
     SobreMiGlobo,
     PublicacionesGlobo
+},
+methods:{
+  recibirUsuario(valor){
+    this.usuario = valor
+  }
 }
 }
 </script>
