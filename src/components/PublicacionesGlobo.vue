@@ -6,7 +6,7 @@
         <img src="../assets/img/img1.jpg" alt="" class="imgPublicacion rounded-3">
         <div class="container">
             <button @click="DarLike" :style="{'background-color': fondo }" class="btn btn-primary" id="btnMeGusta">{{ botonMeGusta }}</button>
-            <p id="txtLike"><b>200 Likes</b></p>
+            <p id="txtLike"><b>{{like}} Likes</b></p>
         </div>
         <br>
         <h5 class="gris">Comentarios</h5>
@@ -42,7 +42,8 @@ export default{
     {
         return{
           botonMeGusta:"Me gusta",
-          fondo:""
+          fondo:"",
+          like:200
         }
     },
     methods:
@@ -52,11 +53,13 @@ export default{
             if(this.botonMeGusta=="Me gusta"){
                 this.botonMeGusta="No me gusta"
                 this.fondo="blue"
+                this.like++
             }
             else{
 
                 this.botonMeGusta="Me gusta"
                 this.fondo=""
+                this.like--
             }
         }
 
