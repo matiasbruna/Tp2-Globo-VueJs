@@ -21,27 +21,29 @@
             <p class="comment"><strong>Kathleen J Rennie </strong> ¡Esta foto de Tokyo es simplemente
                 espectacular! Me trae tantos recuerdos.</p>
         </div>
-        <form @submit.prevent="AgregarComentario">
-            <div class="container" id="divComentarios"> 
+        <div class="container" id="divComentarios"> 
             <p class="comment" v-for = "(arrayComentario, index) in arrayComentarios" :key="index">
                {{ arrayComentario.usuario}} : {{ arrayComentario.comentario }}
-               <button>Eliminar</button>
-            </p>    
-
-            
-            </div>
+               <!-- <button @click="handleClick" :disabled="isDisabled">{{ buttonText }}</button> -->
+               <button >Eliminar</button>
+            </p>              
+        </div>
+        <form @submit.prevent="AgregarComentarios">
+           
 
             <div class="container mt-5 mb-0 p-0">
                 <input v-model="comentario" class="form-control-sm comment mb-0" type="text" id="txtComentarios"
                     placeholder="Deja tu comentario...">
                 <button type="submit" class="btn btn-primary" id="btnComentar">Comentar</button>
             </div>
-            <!-- <p>{{ comentario }}</p> -->
+            
             <div class="container ml-4" id="divAlerta">
-                <p style="color:red">{{ errores }}</p>
+                <p :style="{'color': ColorErrores }">{{ errores }}</p>
             </div>
             <br>
-        </form>     
+        </form>   
+
+        
     </div>
          
 </template>
@@ -64,8 +66,8 @@ export default{
           like:200,
           comentario:"",
           arrayComentarios:[],
-          errores:""
-          
+          errores:"",
+          ColorErrores:"red"
         }
     },
     methods:
@@ -84,7 +86,7 @@ export default{
                 this.like--
             }
         },
-        AgregarComentario(){
+        AgregarComentarios(){
             
             if(!this.comentario.trim()=="")
             {
@@ -98,11 +100,15 @@ export default{
             }
             else{
                 this.errores="Debe ingresar un comentario!!"                
-            }
-           
+            }           
+        },
+        // EliminarComentarios(){
 
-        
-        }
+        //     this.arrayComentarios.Remove({
+
+        //     })
+
+        // }
 
     }
 }
