@@ -1,5 +1,5 @@
 <template>
-    <div class="container mt-5 rounded-5 container-color">
+    <div class="container mt-5 rounded-3 container-color">
         <div class="row">
             <div class="col-xs-12 col-sm-3 d-flex justify-content-center align-items-center">
                 <div class="p-4">
@@ -25,7 +25,7 @@
 
         <div class="row">
             <div class="col-7">
-                <div class="container mt-4 container-color rounded-5 ">
+                <div class="container mt-4 container-color rounded-3 ">
                     <div class="container">
                         <h5 class="gris">Publicado hace 1 semana</h5>
                     </div>
@@ -60,7 +60,7 @@
                 </div>
             </div>
             <div class="col-5">
-                <div class="container rounded-5 container-color mt-4 p-5 ">
+                <div class="container rounded-3 container-color mt-4 p-5 ">
                     <h4 class="gris"><strong>Sobre Mí</strong></h4>
                     <br>
                     <p>¡Hola a todos! Soy Jane, y actualmente vivo en la vibrante
@@ -82,11 +82,15 @@
 </template>
 
 <script>
-export default {
-    name:"CuerpoGlobo"
+    export default {
+        name:"CuerpoGlobo"
 
 
-}
+    }
+
+
+
+
 
 </script>
 
