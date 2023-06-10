@@ -165,7 +165,7 @@ padding-top: 15px;
 {
     width: 400px;
     margin-bottom: 40px;
-    margin-left: 20px;
+    margin-left: 20px;    
 }
 
 </style>
