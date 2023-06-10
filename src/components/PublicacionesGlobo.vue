@@ -5,7 +5,7 @@
         </div>
         <img src="../assets/img/img1.jpg" alt="" class="imgPublicacion rounded-3">
         <div class="container">
-            <button class="btn btn-primary" id="btnMeGusta">Me Gusta</button>
+            <button @click="DarLike" :style="{'background-color': fondo }" class="btn btn-primary" id="btnMeGusta">{{ botonMeGusta }}</button>
             <p id="txtLike"><b>200 Likes</b></p>
         </div>
         <br>
@@ -37,7 +37,30 @@
 
 <script>
 export default{
-    name: 'PulicacionesGlobo'
+    name: 'PublicacionesGlobo',
+    data()
+    {
+        return{
+          botonMeGusta:"Me gusta",
+          fondo:""
+        }
+    },
+    methods:
+    {
+        DarLike(){
+            
+            if(this.botonMeGusta=="Me gusta"){
+                this.botonMeGusta="No me gusta"
+                this.fondo="blue"
+            }
+            else{
+
+                this.botonMeGusta="Me gusta"
+                this.fondo=""
+            }
+        }
+
+    }
 }
 </script>
 
