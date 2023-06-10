@@ -1,11 +1,13 @@
 <template>
   <CabeceraGlobo msg = ""/>
+  <PerfilGlobo/>
   <CuerpoGlobo/>
 </template>
 
 <script>
 import  CabeceraGlobo from './components/CabeceraGlobo.vue'
 import CuerpoGlobo from './components/CuerpoGlobo.vue';
+import PerfilGlobo from './components/PerfilGlobo.vue';
 
 
 
@@ -13,7 +15,8 @@ export default {
   name: 'App',
   components: {
     CabeceraGlobo,
-    CuerpoGlobo
+    CuerpoGlobo,
+    PerfilGlobo
 }
 }
 </script>
