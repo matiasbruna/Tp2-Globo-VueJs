@@ -1,5 +1,5 @@
 <template>
-  <CabeceraGlobo msg = ""/>
+  <CabeceraGlobo/>
 
   <PerfilGlobo/>
 
@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-7">
 
-            <PublicacionesGlobo/>
+            <PublicacionesGlobo :usuario="valorProps"/>
 
         </div>
         <div class="col-5">
@@ -29,6 +29,7 @@ import SobreMiGlobo from './components/SobreMiGlobo.vue';
 
 export default {
   name: 'App',
+  props:['valorProps'],
   components: {
     CabeceraGlobo,
     PerfilGlobo,

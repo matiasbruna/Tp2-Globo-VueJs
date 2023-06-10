@@ -10,8 +10,11 @@
                     </div>
 
                     <div class="col-6 col-sm-6">
-                        <input type="text" class="form-control-sm" placeholder="Ingresa tu usuario..." id="txtUsuario">
+                        <input v-model="usuario" type="text" class="form-control-sm" placeholder="Ingresa tu usuario..." id="txtUsuario">
+                        <App :valorProps="usuario"/>
                     </div>
+                    
+                    
                 </div>
         </div>
     </div>
@@ -20,10 +23,15 @@
 <script>
 export default {
   name: 'CabeceraGlobo',
-  props: {
-    msg: String
+  data() {
+
+    return{
+        usuario:"",
+
+    }
   }
 }
+
 </script>
 
 <style scoped>

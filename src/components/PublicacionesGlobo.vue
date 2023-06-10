@@ -24,7 +24,7 @@
         <form @submit.prevent="AgregarComentario">
             <div class="container" id="divComentarios"> 
             <p class="comment" v-for = "(arrayComentario, index) in arrayComentarios" :key="index">
-            {{ arrayComentario.comentario }}
+               {{ arrayComentario.usuario}} : {{ arrayComentario.comentario }}
             </p>
             
 
@@ -45,8 +45,13 @@
 </template>
 
 <script>
+
+
 export default{
     name: 'PublicacionesGlobo',
+    props:{
+        usuario:String
+    },
     data()
     {
         return{
@@ -55,6 +60,7 @@ export default{
           like:200,
           comentario:"",
           arrayComentarios:[]
+          
         }
     },
     methods:
@@ -76,7 +82,8 @@ export default{
         AgregarComentario(){
 
             this.arrayComentarios.push({
-               comentario: this.comentario
+             usuario:this.valorProps,
+             comentario: this.comentario
             })
         }
 
