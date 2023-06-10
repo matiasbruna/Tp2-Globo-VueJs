@@ -24,12 +24,11 @@
         <div class="container" id="divComentarios"> 
             <p class="comment" v-for = "(arrayComentario, index) in arrayComentarios" :key="index">
                {{ arrayComentario.usuario}} : {{ arrayComentario.comentario }}
-               <!-- <button @click="handleClick" :disabled="isDisabled">{{ buttonText }}</button> -->
-               <button >Eliminar</button>
+             
+               <button class="btn-eliminarCometario" @click="EliminarComentarios(index)">Eliminar</button>
             </p>              
         </div>
-        <form @submit.prevent="AgregarComentarios">
-           
+        <form @submit.prevent="AgregarComentarios">           
 
             <div class="container mt-5 mb-0 p-0">
                 <input v-model="comentario" class="form-control-sm comment mb-0" type="text" id="txtComentarios"
@@ -67,7 +66,9 @@ export default{
           comentario:"",
           arrayComentarios:[],
           errores:"",
-          ColorErrores:"red"
+          ColorErrores:"red",
+          
+          
         }
     },
     methods:
@@ -102,13 +103,10 @@ export default{
                 this.errores="Debe ingresar un comentario!!"                
             }           
         },
-        // EliminarComentarios(){
+        EliminarComentarios(Index){
 
-        //     this.arrayComentarios.Remove({
-
-        //     })
-
-        // }
+            this.arrayComentarios.splice(Index, 1);
+        }
 
     }
 }
