@@ -1,6 +1,5 @@
 <template>
     <div class="container mt-4 p-0">
-
         <div class="row">
             <div class="col-7">
                 <div class="container mt-4 container-color rounded-3 ">
@@ -38,18 +37,7 @@
                 </div>
             </div>
             <div class="col-5">
-                <div class="container rounded-3 container-color mt-4 p-5 ">
-                    <h4 class="gris"><strong>Sobre Mí</strong></h4>
-                    <br>
-                    <p>¡Hola a todos! Soy Jane, y actualmente vivo en la vibrante
-                        y emocionante ciudad de Tokio, Japón. Me encanta capturar
-                        la esencia de la vida a través de mi lente, explorando el
-                        contraste entre la arquitectura moderna y las tradiciones centenarias
-                        que conviven en esta metropolis única. Desde rascacielos deslumbrantes
-                        y calles bulliciosas hasta templos serenos y inspiración en cada
-                        rincón de esta increíble ciudad.
-                    </p>
-                </div>
+                
 
             </div>
 
