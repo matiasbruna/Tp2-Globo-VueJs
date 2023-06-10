@@ -1,0 +1,97 @@
+<template>
+    <div class="container mt-5 rounded-5 container-color">
+        <div class="row">
+            <div class="col-xs-12 col-sm-3 d-flex justify-content-center align-items-center">
+                <div class="p-4">
+                    <img src="../assets/img/perfil.jpg" alt="imagen perfil" title="Jane Doe"
+                        class="rounded-circle border border-3 border-primary imgPerfil">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-7 datos">
+                <h2><b>Jane Doe</b></h2>
+                <p class="datos"><b>Email: </b>jane_doe@gmail.com</p>
+                <p class="datos"><b>Fecha de nacimiento: </b>01/05/1996</p>
+                <p class="datos"><b>Teléfono: </b>918-936-9585</p>
+                <p class="datos"><b>Ciudad: </b>Tokyo, Japón</p>
+                <p class="gris">Trabajando en <b>Lawn N</b></p>
+            </div>
+            <div class="col-xs-12 col-sm-2 " style="position: relative" id="cajaSeguir">
+                <button class="btn btn-outline-primary" id="btnSeguir">Seguir</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4 p-0">
+
+        <div class="row">
+            <div class="col-7">
+                <div class="container mt-4 container-color rounded-5 ">
+                    <div class="container">
+                        <h5 class="gris">Publicado hace 1 semana</h5>
+                    </div>
+                    <img src="../assets/img/img1.jpg" alt="" class="imgPublicacion rounded-3">
+                    <div class="container">
+                        <button class="btn btn-primary" id="btnMeGusta">Me Gusta</button>
+                        <p id="txtLike"><b>200 Likes</b></p>
+                    </div>
+                    <br>
+                    <h5 class="gris">Comentarios</h5>
+                    <br>
+
+                    <div class="container">
+                        <p class="comment"><strong>Juan Perez </strong> ¡Wow, esa foto de Tokio es impresionante!
+                            (っ-●益●)っ ,︵‿ </p>
+                    </div>
+
+                    <div class="container">
+                        <p class="comment"><strong>Kathleen J Rennie </strong> ¡Esta foto de Tokyo es simplemente
+                            espectacular! Me trae tantos recuerdos.</p>
+                    </div>
+                    <div class="container" id="divComentarios">
+                    </div>
+
+                    <div class="container mt-5 mb-0 p-0">
+                        <input class="form-control-sm comment mb-0" type="text" id="txtComentarios"
+                            placeholder="Deja tu comentario...">
+                        <button class="btn btn-primary" id="btnComentar">Comentar</button>
+                    </div>
+                    <div class="container ml-4" id="divAlerta"></div>
+                    <br>
+                </div>
+            </div>
+            <div class="col-5">
+                <div class="container rounded-5 container-color mt-4 p-5 ">
+                    <h4 class="gris"><strong>Sobre Mí</strong></h4>
+                    <br>
+                    <p>¡Hola a todos! Soy Jane, y actualmente vivo en la vibrante
+                        y emocionante ciudad de Tokio, Japón. Me encanta capturar
+                        la esencia de la vida a través de mi lente, explorando el
+                        contraste entre la arquitectura moderna y las tradiciones centenarias
+                        que conviven en esta metropolis única. Desde rascacielos deslumbrantes
+                        y calles bulliciosas hasta templos serenos y inspiración en cada
+                        rincón de esta increíble ciudad.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</template>
+
+<script>
+export default {
+    name:"CuerpoGlobo"
+
+    
+}
+
+</script>
+
+<style scoped>
+
+
+</style>
+
