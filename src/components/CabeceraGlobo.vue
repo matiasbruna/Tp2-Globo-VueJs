@@ -23,7 +23,13 @@ export default {
   },
   watch: {
     usuario(nuevoUsuario) {
-      this.$emit('usuarioEnviado', nuevoUsuario);
+        if(!this.usuario.trim()==""){
+        this.$emit('usuarioEnviado', nuevoUsuario)
+        }
+        else{
+            this.usuario=""
+        }
+
     }
   },
 }
