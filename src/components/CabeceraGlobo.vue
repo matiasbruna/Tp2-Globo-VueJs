@@ -2,10 +2,10 @@
     <div class="header">
         <div class="container">
             <div class="row">
-                <div class="col-6 col-sm-6">
+                <div class="col-md-6">
                     <img src="@/assets/img/logo.png" class="logo" alt="">
                 </div>       
-                    <div class="col-6 col-sm-6">
+                    <div class="col-md-6">
                     <input v-model="usuario"  type="text" class="form-control-sm" placeholder="Ingresa tu usuario..." id="txtUsuario">
                 </div>                                     
             </div>

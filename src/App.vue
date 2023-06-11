@@ -1,14 +1,22 @@
 <template>
-  <CabeceraGlobo  @usuarioEnviado="recibirUsuario"/> 
-  <PerfilGlobo/>
-  <div class="container mt-4 p-0">
-    <div class="row">
-        <div class="col-7">
-            <PublicacionesGlobo :usuario ="usuario"/>
-        </div>
-        <div class="col-5">
-          <SobreMiGlobo/>          
-        </div>
+  <div class="container">
+    <CabeceraGlobo  @usuarioEnviado="recibirUsuario"/>
+  </div>
+   
+  <div class="container">
+    <PerfilGlobo/>
+  </div>
+  
+  <div class="container">
+    <div class="container mt-4 ">
+      <div class="row">
+          <div class="col-md-7">
+              <PublicacionesGlobo :usuario ="usuario"/>
+          </div>
+          <div class="col-md-5">
+            <SobreMiGlobo/>          
+          </div>
+      </div>  
     </div>
   </div>
 </template>
