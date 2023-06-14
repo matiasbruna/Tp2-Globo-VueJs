@@ -27,7 +27,7 @@ export default {
         this.$emit('usuarioEnviado', nuevoUsuario)
         }
         else{
-            this.usuario=""
+            this.$emit('usuarioEnviado', this.usuario="")
         }
 
     }
