@@ -1,6 +1,6 @@
 Tp2-Globo-VueJS
 
-  Trabajo Práctico N° 2 de la Materia Laboratorio de Computación III, de la carrera Tecnicatura Universitaria en Programación dictada en la UNIVERSIDAD TECNOLOGICA NACIONAL (UTN) Facultad Regional San Francisco.
+  Trabajo Práctico N° 2 de la Asignatura Laboratorio de Computación III, perteneciente a la Tecnicatura Universitaria en Programación dictada en la UNIVERSIDAD TECNOLOGICA NACIONAL (UTN) Facultad Regional San Francisco.
   
   Como objetivo teníamos la adaptación e implementación de VUE con respecto al primer trabajo práctico llamado "RED SOCIAL GLOBO", en el mismo se optimizaron validaciones que habían quedado en el primer trabajo, también se hizo uso de diferentes componentes para crear un código más legible y fácil de poder modificar en un futuro.
   
